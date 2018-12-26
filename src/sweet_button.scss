@@ -1,0 +1,78 @@
+$color-default: white;
+$color-light: lightblue;
+$color-primary: blue;
+$color-secondary: green;
+$color-danger: red;
+$color-dark: black;
+
+@mixin link-colors($bg-color) {
+    background-color: $bg-color;
+}
+
+@mixin link-size($width, $height, $font-size) {
+    width: $width;
+    height: $height;
+    line-height: $height;
+    font-size: $font-size;
+}
+
+.custom-button {
+    display: inline-block;
+    outline: 0 none;
+    -webkit-appearance: none;
+    box-sizing: border-box;
+    padding: 0;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: white;
+    @include link-size(100px, 47px, 18px);
+    @include link-colors($color-default);
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.bg-color-light {
+    @include link-colors($color-light);
+}
+
+.bg-color-primary {
+    @include link-colors($color-primary);
+}
+
+.bg-color-secondary {
+    @include link-colors($color-secondary);
+}
+
+.bg-color-danger {
+    @include link-colors($color-danger);
+}
+
+.bg-color-dark {
+    @include link-colors($color-dark);
+}
+
+.size-xlarge {
+    @include link-size(150px, 50px, 12px);
+}
+
+.size-large {
+    @include link-size(120px, 40px, 12px);
+}
+
+.size-medium {
+    @include link-size(100px, 30px, 12px);
+}
+
+.size-small {
+    @include link-size(80px, 25px, 12px);
+}
+
+.size-xsmall {
+    @include link-size(50px, 20px, 12px);
+}
+
