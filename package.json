@@ -1,6 +1,6 @@
 {
   "name": "react-sweet-button",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "a button component of react",
   "main": "dist/bundle.js",
   "files": [
