@@ -41,7 +41,7 @@ class SweetButton extends Component {
     onClick(e) {
         e.stopPropagation();
         const {onClick} = this.props;
-        onClick();
+        if(onClick) onClick();
     }
 }
 
