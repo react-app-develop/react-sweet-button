@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
-import './sweet_button.scss';
+import './button.scss';
 
 class SweetButton extends Component {
     constructor(props) {
@@ -19,6 +19,15 @@ class SweetButton extends Component {
             dark: 'bg-color-dark'
         }
 
+        const btn_outline_type = {
+            default: 'bg-color-primary-outline',
+            light: 'bg-color-light-outline',
+            primary: 'bg-color-primary-outline',
+            secondary: 'bg-color-secondary-outline',
+            danger: 'bg-color-danger-outline',
+            dark: 'bg-color-dark-outline'
+        }
+
         const btn_size = {
             xlarge: 'size-xlarge',
             large: 'size-large',
@@ -27,9 +36,18 @@ class SweetButton extends Component {
             xsmall: 'size-xsmall'
         }
 
-        const { type, size, disabled, className, style, children } = this.props;
+        const { type, size, disabled, outline, block, className, style, children } = this.props;
 
-        const btn_class = classnames('custom-button', btn_type[type], btn_size[size], className, {disabled: disabled});
+        let btn_outline = null;
+        if(outline) {
+            if(type && btn_type[type]) {
+                btn_outline = btn_outline_type[type];
+            }else {
+                btn_outline = btn_outline_type['primary'];
+            }
+        }
+        
+        const btn_class = classnames('sweet-button', btn_type[type], btn_outline, btn_size[size], block ? ' block' : null, className, {disabled: disabled});
 
         return (
             <a className={btn_class} style={style} onClick={(e)=>this.onClick(e)}>

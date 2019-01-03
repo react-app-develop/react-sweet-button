@@ -1,3 +1,4 @@
 import SweetButton from './sweet_button.jsx';
+import DimensionButton from './dimension_button.jsx';
 
-export default SweetButton;
+export { SweetButton, DimensionButton }

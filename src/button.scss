@@ -1,0 +1,180 @@
+$color-light: #f4f4f4;
+$color-primary: #387ef5;
+$color-secondary: #32db64;
+$color-danger: #f53d3d;
+$color-dark: #222222;
+$shadow-color-light: #d7d8da;
+$shadow-color-primary: #3171e0;
+$shadow-color-secondary: #0bb8cc;
+$shadow-color-danger: #d33939;
+$shadow-color-dark: #1e2023;
+$color-default: $color-primary;
+$shadow-color-default: $shadow-color-primary;
+
+@mixin link-colors($bg-color, $color: white) {
+    background-color: $bg-color;
+    color: $color;
+}
+
+@mixin link-border-colors($border-color:transparent) {
+    border: 1px solid $border-color;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+}
+
+@mixin link-shadow-colors($shadow-color) {
+    -webkit-box-shadow:
+        0 6px 0 $shadow-color,
+        0 10px 15px rgba(0,0,0,.35);
+    -moz-box-shadow:
+        0 6px 0 $shadow-color,
+        0 10px 15px rgba(0,0,0,.35);
+    box-shadow:
+        0 6px 0 $shadow-color,
+        0 10px 15px rgba(0,0,0,.35);
+}
+
+@mixin link-size($width, $height, $font-size) {
+    width: $width;
+    height: $height;
+    line-height: $height;
+    font-size: $font-size;
+}
+
+.sweet-button {
+    display: inline-block;
+    outline: 0 none;
+    -webkit-appearance: none;
+    box-sizing: border-box;
+    padding: 0;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: white;
+    @include link-size(100px, 47px, 18px);
+    @include link-colors($color-default);
+    @include link-border-colors();
+    border-radius: 5px;
+    &:hover {
+        cursor: pointer;
+    }
+    &:active {
+        position: relative;
+        top: 1px;
+    }
+}
+
+.dimension-button {
+    display: inline-block;
+    color: white;
+    border: 1px solid transparent;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    @include link-size(100px, 47px, 18px);
+    @include link-colors($color-default);
+    @include link-shadow-colors($shadow-color-default);
+    &:hover {
+        cursor: pointer;
+    }
+    &:active {
+        position: relative;
+        top: 1px;
+    }
+}
+
+.bg-color-light {
+    @include link-colors($color-light, black);
+}
+
+.bg-color-light-outline {
+    @include link-colors(transparent !important, $color-light);
+    @include link-border-colors($color-light);
+}
+
+.bg-color-light-3d {
+    @include link-colors($color-light, black);
+    @include link-shadow-colors($shadow-color-light);
+}
+
+.bg-color-primary {
+    @include link-colors($color-primary);
+}
+
+.bg-color-primary-outline {
+    @include link-colors(transparent !important, $color-primary);
+    @include link-border-colors($color-primary);
+}
+
+.bg-color-primary-3d {
+    @include link-colors($color-primary);
+    @include link-shadow-colors($shadow-color-primary);
+}
+
+.bg-color-secondary {
+    @include link-colors($color-secondary);
+}
+
+.bg-color-secondary-outline {
+    @include link-colors(transparent !important, $color-secondary);
+    @include link-border-colors($color-secondary);
+}
+
+.bg-color-secondary-3d {
+    @include link-colors($color-secondary);
+    @include link-shadow-colors($shadow-color-secondary);
+}
+
+.bg-color-danger {
+    @include link-colors($color-danger);
+}
+
+.bg-color-danger-outline {
+    @include link-colors(transparent !important, $color-danger);
+    @include link-border-colors($color-danger);
+}
+
+.bg-color-danger-3d {
+    @include link-colors($color-danger);
+    @include link-shadow-colors($shadow-color-danger);
+}
+
+.bg-color-dark {
+    @include link-colors($color-dark);
+}
+
+.bg-color-dark-outline {
+    @include link-colors(transparent !important, $color-dark);
+    @include link-border-colors($color-dark);
+}
+
+.bg-color-dark-3d {
+    @include link-colors($color-dark);
+    @include link-shadow-colors($shadow-color-dark);
+}
+
+.size-xlarge {
+    @include link-size(150px, 50px, 12px);
+}
+
+.size-large {
+    @include link-size(120px, 40px, 12px);
+}
+
+.size-medium {
+    @include link-size(100px, 30px, 12px);
+}
+
+.size-small {
+    @include link-size(80px, 25px, 12px);
+}
+
+.size-xsmall {
+    @include link-size(50px, 20px, 12px);
+}
+
+.block {
+    width: calc(100% - 24px);
+}
+
