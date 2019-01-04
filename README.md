@@ -90,7 +90,10 @@ import { SweetButton, DimensionButton } from 'react-sweet-button';
 按钮的属性说明如下：
 
 type: 设置按钮类型，可选值为 light primary secondary danger dark或者不设 默认值为 primary
+
 size: 设置按钮大小，可选值为 xlarge large medium small xsmall或者不设 默认值large
+
 outline: 设置按钮样式(仅带边框按钮)
+
 block: 设置按钮样式(block button)
 
