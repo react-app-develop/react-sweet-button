@@ -12,13 +12,9 @@ a button component of react
 
 >  如有问题请直接在 Issues 中提，或者您发现问题并有非常好的解决方案，欢迎 PR 👍
 
->  传送门1：[vue2-admin-grace优雅的后台管理系统](https://github.com/Alex-0407/vue2-admin-grace)
+>  传送门1：[vue2-admin-grace优雅的后台管理系统](https://github.com/artdong/vue2-admin-grace)
 
->  传送门2：[微信小程序——前端排行榜](https://github.com/Alex-0407/weapp-web-rank)
-
->  传送门3：[ionic2-janalytics(ionic native插件)](https://github.com/Alex-0407/ionic2-janalytics)
-
->  传送门4：[ionic2-wechat(ionic native插件)](https://github.com/Alex-0407/ionic2-wechat)
+>  传送门2：[ionic3自定义组件及常用例子](https://github.com/artdong/ionic3-awesome)
 
 ## 技术栈
 
@@ -81,7 +77,7 @@ import { SweetButton, DimensionButton } from 'react-sweet-button';
 
 ## 效果预览
 
-![预览图](https://github.com/alex-0407/react-sweet-button/blob/develop/examples/demo/image/react-button.png?raw=true)
+![预览图](https://github.com/artdong/react-sweet-button/blob/develop/examples/demo/image/react-button.png?raw=true)
 
 ## API
 
